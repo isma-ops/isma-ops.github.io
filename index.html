@@ -11,7 +11,11 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="noise-layer" aria-hidden="true"></div>
   <div class="cursor-glow" id="cursor-glow"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+  <div class="progress-rail" aria-hidden="true"><span id="scroll-progress"></span></div>
 
   <header class="hero reveal" id="top">
     <p class="eyebrow">Data Consultant · Data Engineer</p>
@@ -25,13 +29,18 @@
       <span>Casablanca, Morocco</span>
     </div>
     <nav class="quick-nav" id="view-nav">
-      <button class="active" data-view="experience-view" type="button">Experience</button>
-      <button data-view="tech-view" type="button">Tech Stack</button>
-      <button data-view="profile-view" type="button">Education + Certifications</button>
+      <button class="active magnetic" data-view="experience-view" type="button">Experience</button>
+      <button class="magnetic" data-view="tech-view" type="button">Tech Stack</button>
+      <button class="magnetic" data-view="profile-view" type="button">Education + Certifications</button>
     </nav>
+    <div class="hero-stats">
+      <article><strong data-counter="4">0</strong><span>Years Experience</span></article>
+      <article><strong data-counter="5">0</strong><span>International Clients</span></article>
+      <article><strong data-counter="35">0</strong><span>Tools & Technologies</span></article>
+    </div>
   </header>
 
-  <main id="content-stage">
+  <main id="content-stage" class="stage-shell">
     <section class="card reveal view-pane active" id="experience-view">
       <h2>Professional Experience</h2>
       <p>
